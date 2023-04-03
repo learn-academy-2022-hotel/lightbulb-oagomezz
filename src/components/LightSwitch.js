@@ -1,30 +1,26 @@
 import React, {useState} from "react"
+// import lightOff from "./assets/lightOff"
+// import lightOn from "./assets/lightOn.png"
+// import switchOff from "./assets/switchOff.png"
+// import switchOn from "./assets/switchOn.png"
 
 const LightSwitch = (props) => {
   
-  // const[lightSwitchStatus,setLightSwitchStatus] = useState(false)
+  const[lightSwitchStatus,setLightSwitchStatus] = useState(false)
 
-  //   const lightsOn = () => {
-  //     setLightSwitchStatus(lightSwitchStatus === false ? true:false)
-  //   }
-  //   let switchOnOff = lightSwitchStatus === true ? 'on': 'off'
-      // let bulbOn = lightSwitchStatus === true ? 'yellow': 'white'
-// changes the color of the lightbulb on the app based on the use state value of the light switch.
-      var bulbColor = () => {
-          if(props.lightSwitchStatus === 'off') {
-           return 'white'
-          } else if(props.lightSwitchStatus === 'on') {
-            return 'yellow'
-          }
-        }
+    
+    const lightsOn = () => {
+      setLightSwitchStatus(lightSwitchStatus === false ? true:false)
+    }
+    let switchOnOff = lightSwitchStatus === true ? 'switchOn': 'switchOff'
+    let bulbOn = lightSwitchStatus === true ? 'lightbulbOn': 'lightbulbOff'
+     
   return (
     <>
-
-      {/* Got the box working with the click function could not get the style to change color on request. The style was not changiing with the program I had written. */}
-      {/* <div  className= 'lightbulb' onClick={lightsOn} style={{background: bulbOn}}>{switchOnOff}</div>  */}
-
-
-      <div onClick= {props.toggleLightSwitch} style={{background:bulbColor()}} className="lightbulb" >{props.lightSwitchStatus}</div> 
+      <div>
+        <div  className= {switchOnOff} onClick={lightsOn} ></div> 
+        <div onClick= {props.toggleLightSwitch} className={bulbOn} >{props.lightSwitchStatus}</div>  
+      </div>
     </>
   )
 }
