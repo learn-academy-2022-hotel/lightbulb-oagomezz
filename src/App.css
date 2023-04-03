@@ -2,8 +2,42 @@ h1 {
   text-align: center;
 }
 
-.lightbulb {
+.lightbulbOff {
+  background-image: url("./assets/lightOff.png");
+  background-size: contain;
   border: 2px solid black;
   width: 200px;
   height: 200px;
+  margin: 0 auto
+}
+
+.lightbulbOn {
+  background-image: url("./assets/lightOn.png");
+  background-size: contain;
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto
+}
+.switchOff {
+  background-image: url("./assets/switchOff.png");
+  background-size: contain;
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto
+}
+
+.switchOn {
+  background-image: url("./assets/switchOn.png");
+  background-size: contain;
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto
+}
+
+.profile {
+  background: silver;
+  background-size: auto;
 }
